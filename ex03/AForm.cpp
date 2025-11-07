@@ -29,7 +29,7 @@ AForm::AForm(const AForm &other)
     std::cout << "copy constructor called" << std::endl;
 }
 
-AForm &AForm::operator=(const AForm &other)
+AForm &AForm::operator=(AForm &other)
 {
     std::cout << "AForm copy assignment operator called" << std::endl;
     if (this != &other)

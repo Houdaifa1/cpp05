@@ -43,7 +43,7 @@ class AForm
         virtual ~AForm();
         AForm(std::string name, int new_grade_to_sign, int new_grade_to_exec);
         AForm(const AForm &other);
-        AForm &operator=(const AForm &other);
+        AForm &operator=(AForm &other);
 
         virtual void execute (Bureaucrat const  &executor) const = 0 ;
 
