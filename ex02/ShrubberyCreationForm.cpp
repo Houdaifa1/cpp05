@@ -33,9 +33,9 @@ void ShrubberyCreationForm::execute(Bureaucrat const  &executor) const
     {
         throw FaildToOpen();
     }
-    tree << "  /\\"
-         << " /  \\"
-         << "/____\\"
-         << "  ||";
+    tree << "  /\\\n"
+         << " /  \\\n"
+         << "/____\\\n"
+         << "  ||\n";
     tree.close();
 }
