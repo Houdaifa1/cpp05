@@ -28,19 +28,32 @@ class AForm
             public :
                 virtual const char *what() const throw();
         };
+        class GradeExecLow : public std::exception
+        {
+            public :
+                virtual const char *what() const throw();
+        };
+        class FormNotSigned : public std::exception
+        {
+            public :
+                virtual const char *what() const throw();
+        };
+
         AForm();
         virtual ~AForm();
         AForm(std::string name, int new_grade_to_sign, int new_grade_to_exec);
         AForm(AForm &other);
         AForm &operator=(AForm &other);
 
-        virtual void execute (Bureaucrat const  &executor) = 0;
+        virtual void execute (Bureaucrat const  &executor) const = 0 ;
 
         std::string get_name() const;
         bool get_signed_info() const;
         int get_grade_to_sign() const;
         int get_grade_to_exec() const;
 
+
+        void check_before_exec(Bureaucrat const  &executor) const;
         void beSigned(Bureaucrat &bureaucrat);
 
 
