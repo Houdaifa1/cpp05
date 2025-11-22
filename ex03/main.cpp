@@ -22,8 +22,10 @@ int main()
     }
     Intern someRandomIntern;
     AForm* rrf;
-    rrf = someRandomIntern.makeForm("qss request", "Bender");
-   (void)rrf;
+    rrf = someRandomIntern.makeForm("shrubbery creation", "tessssst");
+    Bureaucrat alice("Alice", 1);
+    alice.signAForm(*rrf);
+    alice.executeForm(*rrf);
     delete (rrf);
     return 0;
 }

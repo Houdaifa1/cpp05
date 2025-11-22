@@ -2,10 +2,9 @@
 # define AForm_HPP
 
 # include <iostream>
+# include <exception>
 
 class Bureaucrat;
-
-
 
 class AForm
 {

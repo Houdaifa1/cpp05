@@ -5,9 +5,7 @@
 
 AForm::AForm() :
     name("default"), grade_to_sign(1), grade_to_exec(1)
-{
-    std::cout << "Default constructor called" << std::endl;
-}
+{}
 
 AForm::AForm(std::string name, int grade_to_sign, int grade_to_exec) :
     name(name), grade_to_sign(grade_to_sign), grade_to_exec(grade_to_exec)
@@ -17,7 +15,6 @@ AForm::AForm(std::string name, int grade_to_sign, int grade_to_exec) :
     if (grade_to_sign < 1 || grade_to_exec < 1)
         throw AForm::GradeTooHighException();
     is_signed = false;
-    std::cout << "Parameterized constructor called" << std::endl;
 }
 
 AForm::AForm(const AForm &other)
@@ -25,17 +22,13 @@ AForm::AForm(const AForm &other)
       is_signed(other.is_signed),
       grade_to_sign(other.grade_to_sign),
       grade_to_exec(other.grade_to_exec)
-{
-    std::cout << "copy constructor called" << std::endl;
-}
+{}
 
 AForm &AForm::operator=(const AForm &other)
 {
-    std::cout << "AForm copy assignment operator called" << std::endl;
     if (this != &other)
         this->is_signed = other.is_signed;
     return *this;
-
 }
 
 const char *AForm::GradeTooHighException::what() const throw()
@@ -98,6 +91,4 @@ std::ostream &operator<<(std::ostream &out, AForm &AForm)
 }
 
 AForm::~AForm()
-{
-    std::cout << "Destructor called" << std::endl;
-}
+{}

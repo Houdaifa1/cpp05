@@ -2,6 +2,7 @@
 # define BUREAUCRAT_HPP
 
 # include <iostream>
+# include <exception>
 
 
 class AForm;
@@ -30,8 +31,8 @@ class Bureaucrat
         Bureaucrat();
         ~Bureaucrat();
         Bureaucrat(std::string name, int new_grade);
-        Bureaucrat(Bureaucrat &other);
-        Bureaucrat &operator=(Bureaucrat &other);
+        Bureaucrat(const Bureaucrat &other);
+        Bureaucrat &operator=(const Bureaucrat &other);
 
         std::string getName() const;
         int         getGrade() const;

@@ -12,8 +12,6 @@ int main()
         ShrubberyCreationForm tree("");
         alice.signAForm(tree);
         alice.executeForm(tree);
-
-      
     }
     catch (std::exception &e)
     {

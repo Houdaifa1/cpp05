@@ -18,10 +18,11 @@ Intern::~Intern(){}
 
 AForm *Intern::makeForm(std::string form_name, std::string target)
 {
-    std::vector<std::string> form_names;
-    form_names.push_back("presidential pardon");
-    form_names.push_back("robotomy request");
-    form_names.push_back("shrubbery creation");
+    const char* form_names[3] = {
+        "presidential pardon",
+        "robotomy request",
+        "shrubbery creation"
+    };
 
     AForm *forms[3] = {
         new PresidentialPardonForm(target),
