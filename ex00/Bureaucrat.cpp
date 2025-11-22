@@ -17,10 +17,9 @@ Bureaucrat::Bureaucrat(std::string name, int new_grade) :
     std::cout << "Parameterized constructor called" << std::endl;
 }
 
-Bureaucrat::Bureaucrat(const Bureaucrat &other)
+Bureaucrat::Bureaucrat(const Bureaucrat &other) : name(other.name), grade(other.grade)
 {
     std::cout << "Copy constructor called" << std::endl;
-    grade = other.grade;
 }
 
 Bureaucrat &Bureaucrat::operator=(const Bureaucrat &other)
