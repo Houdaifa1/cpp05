@@ -2,6 +2,7 @@
 # define FORM_HPP
 
 # include <iostream>
+# include <exception>
 
 class Bureaucrat;
 
@@ -31,8 +32,8 @@ class Form
         Form();
         ~Form();
         Form(std::string name, int new_grade_to_sign, int new_grade_to_exec);
-        Form(Form &other);
-        Form &operator=(Form &other);
+        Form(const Form &other);
+        Form &operator=(const Form &other);
 
         std::string get_name() const;
         bool get_signed_info() const;
